@@ -1,4 +1,4 @@
-#Toto - A Laravel sample application</p>
+# Toto - A Laravel sample application</p>
 
 ## About Toto
 
@@ -17,10 +17,10 @@ As a worked example of making use of persisted backend functionality in a transp
 The Repository pattern also allows for optional validator classes to be created so that all model data validation is automatically handled before data is persisted. While sample validators are included in the code base, the Create, Update and Delete methods are currently simple stubs and not fully implemented.
 
 
-##Environment and Assumptions
+## Environment and Assumptions
 This application was developed using a Linux back end VM (Ubuntu 16.04) under VMWare Workstation. The following provides a summary of the environment but the code should work properly in any appropriately configured hosting environment.
 
-###Nginx
+### Nginx
 Install and configure Nginx
 
 sudo apt-get install nginx
@@ -53,7 +53,7 @@ as a new secrion, add
             include fastcgi_params;
         }
  
-###PHP 7
+### PHP 7
 Install and configure PHP 7 (minimal modules listed)
 
     sudo apt-get install php7.0 php7.0-fpm php7.0-mysql php7.0-zip php7.0-mbstring php7.0-xml
@@ -68,7 +68,7 @@ add the line
 
     listen = 127.0.0.1:9000
 
-###MySQL
+### MySQL
 Install and configure MySQL Server
 
     sudo apt-get install mysql-server
@@ -84,7 +84,7 @@ Restart services to apply configuration changes
     sudo service nginx restart 
     sudo service php7.0-fpm restart
 
-###Composer
+### Composer
 Install composer and make globally available (as non root user)
 
     cd ~
@@ -98,10 +98,12 @@ Install composer and make globally available (as non root user)
 
 
 
-###Application code configuration
+### Application code configuration
 Get the code and initialise Laravel environment and config
 
-####.env file
+#### The .env file
+The .env file generally contains information that is not appropriate to commit into the SVN as is also environment specific.
+ 
 In the /var/www/html/toto directory, create a .env file that contains values such as the following :
     APP_NAME=Toto	
     APP_ENV=local
@@ -144,7 +146,7 @@ In the /var/www/html/toto directory, create a .env file that contains values suc
     REPOSITORY_REDIS_CLEAN=true
     REPOSITORY_CACHE_EXPIRY=30
 
-####Laravel environment installation and configuration
+#### Laravel environment installation and configuration
 In the /var/www/html/toto directory 
  
     composer update
