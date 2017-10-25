@@ -44,7 +44,7 @@ modify
 
  	try_files $uri $uri/ /index.php?$args;
 
-as a new secrion, add
+as a new section, add
 
      location ~ \.php$ {
             fastcgi_pass 127.0.0.1:9000;
@@ -105,6 +105,7 @@ Get the code and initialise Laravel environment and config
 The .env file generally contains information that is not appropriate to commit into the SVN as is also environment specific.
  
 In the /var/www/html/toto directory, create a .env file that contains values such as the following :
+
     APP_NAME=Toto	
     APP_ENV=local
     APP_KEY=base64:qwWZ4827MkPaGnQzO/FnKSGS4YCK+qnVx3XiZluYpBc=
@@ -154,3 +155,4 @@ In the /var/www/html/toto directory
     php artisan clear-compiled
     php artisan optimize
     php artisan config:cache
+
